@@ -11,7 +11,6 @@ int calc(int l, int r) {
     if (l == r) return 0;
     if (r < l) return 0;
     int u = calc(l+1, r-1) + cost[l] + cost[r];
-    printf("l is %d , r is %d cost is %d\n",l, r,u);
     for (int i = l; i < r; i++) {
         int t = calc(l, i) + calc(i+1, r);
         if (t < u) {
